@@ -1,5 +1,6 @@
 /*
-Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num up to length.
+Create a function that takes two numbers as arguments (num, length)
+and returns an array of multiples of num up to length.
 
 Examples
 arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
@@ -11,8 +12,14 @@ Notes
 Notice that num is also included in the returned array.
 */
 
-function arrayOfMultiples(/*args*/) {
+function arrayOfMultiples(num, len) {
   //your code
+  const res = []
+  for (let i=1; i<=len; i++){
+    res.push(num * i)
+  }
+
+  return res;
 }
 
 exports.solution = arrayOfMultiples;
