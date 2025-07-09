@@ -1,5 +1,6 @@
 /*
-You're given a string of words. You need to find the word "Nemo", and return a string like this: "I found Nemo at [the order of the word you find nemo]!".
+You're given a string of words. You need to find the word "Nemo",
+and return a string like this: "I found Nemo at [the order of the word you find nemo]!".
 
 If you can't find Nemo, return "I can't find Nemo :(".
 
@@ -16,8 +17,18 @@ Nemo's, or anything that says Nemo with something behind it, doesn't count as Fi
 If there are multiple Nemo's in the sentence, only return for the first one.
 */
 
-function findNemo( /*args*/ ) {
+function findNemo( text ) {
   //your code
+  const words = text.split(' ')
+  console.log(words);
+
+  for (let word in words){
+    if (words[word].length === 4 && words[word].includes('Nemo')){
+      return `I found Nemo at ${++word}!`
+    }
+  }
+  
+  return "I can't find Nemo :("
 }
 
 exports.solution = findNemo;
