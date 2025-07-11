@@ -1,5 +1,6 @@
 /*
-Create a function that takes an array of objects (groceries) which calculates the total price and returns it as a number. A grocery object has a product, a quantity and a price, for example:
+Create a function that takes an array of objects (groceries) which calculates the total price
+and returns it as a number. A grocery object has a product, a quantity and a price, for example:
 
 {
   "product": "Milk",
@@ -40,8 +41,14 @@ Notes
 There might be a floating point precision problem in here...
 */
 
-function getTotalPrice( /*args*/ ) {
+function getTotalPrice( products ) {
   //your code
+  let sum = 0;
+  products.forEach(prod => {
+    sum += prod.quantity * prod.price
+  })
+
+  return Number(sum.toFixed(1));
 }
 
 exports.solution = getTotalPrice;
