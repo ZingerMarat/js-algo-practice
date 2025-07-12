@@ -1,5 +1,8 @@
 /*
-To train for an upcoming marathon, Johnny goes on one long-distance run each Saturday. He wants to track how often the number of miles he runs this Saturday exceeds the number of miles run the previous Saturday. This is called a progress day.
+To train for an upcoming marathon, Johnny goes on one long-distance run each Saturday.
+He wants to track how often the number of miles he runs this Saturday exceeds
+the number of miles run the previous Saturday.
+This is called a progress day.
 
 Create a function that takes in an array of miles run every Saturday and returns Johnny's total number of progress days.
 
@@ -16,8 +19,9 @@ Notes
 Running the same number of miles as last week does not count as a progress day.
 */
 
-function progressDays( /*args*/ ) {
+function progressDays( arr ) {
   //your code
+  return arr.filter((day, index, arr) => index > 0 && day > arr[index-1]).length
 }
 
 exports.solution = progressDays;

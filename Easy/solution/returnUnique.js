@@ -10,8 +10,15 @@ Notes
 Keep the same ordering in the output.
 */
 
-function returnUnique( /*args*/ ) {
+function returnUnique( arr ) {
   //your code
+  const repeats  = arr.reduce((acc, num) => {
+    acc[num] = (acc[num] || 0) + 1
+    return acc
+  }, {})
+
+  return arr.filter(num => repeats[num] === 1)
 }
+
 
 exports.solution = returnUnique;
