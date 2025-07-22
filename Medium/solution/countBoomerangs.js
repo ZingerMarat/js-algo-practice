@@ -1,5 +1,6 @@
 /*
-A boomerang is a V-shaped sequence that is either upright or upside down. Specifically, a boomerang can be defined as: sub-array of length 3, with the first and last digits being the same and the middle digit being different.
+A boomerang is a V-shaped sequence that is either upright or upside down.
+Specifically, a boomerang can be defined as: sub-array of length 3, with the first and last digits being the same and the middle digit being different.
 
 Some boomerang examples:
 
@@ -24,8 +25,20 @@ Notes
 [5, 5, 5] (triple identical digits) is NOT considered a boomerang because the middle digit is identical to the first and last.
 */
 
-function countBoomerangs( /*args*/ ) {
+function countBoomerangs( arg ) {
   //your code
+  let count = 0
+
+  for(let i=0; i < arg.length - 2; i++){
+    if (arg[i] === arg[i+2] && arg[i] !== arg[i+1]){
+      count += 1
+    }
+  }
+
+  return count
 }
+
+console.log(countBoomerangs([1, 7, 1, 7, 1, 7, 1]));
+
 
 exports.solution = countBoomerangs;
