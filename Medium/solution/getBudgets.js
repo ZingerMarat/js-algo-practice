@@ -15,8 +15,21 @@ getBudgets([
 ]) ➞ 62600
 */
 
-function getBudgets( /*args*/ ) {
+function getBudgets( args ) {
   //your code
+
+  const result = args.reduce((acc, item) => {
+    return acc += item.budget
+  },0)
+
+  return result
 }
 
 exports.solution = getBudgets;
+
+
+console.log(getBudgets([
+  { name: "John",  age: 21, budget: 29000 },
+  { name: "Steve",  age: 32, budget: 32000 },
+  { name: "Martin",  age: 16, budget: 1600 }
+]))

@@ -14,8 +14,22 @@ The strings can contain white spaces or any type of characters.
 Bonus: Try solving this without regex.
 */
 
-function numInStr( /*args*/ ) {
+function numInStr( arr ) {
   //your code
+  const result = []
+
+  arr.forEach((elem) => {
+    for (let l of elem){
+      if(parseInt(l)){
+        result.push(elem)
+        return
+      }
+    }
+  })
+
+  return result
 }
+
+console.log(numInStr(["this IS", "10xYZ", "xy2K77", "Z1K2W0", "xYz"]) );
 
 exports.solution = numInStr;

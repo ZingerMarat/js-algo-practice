@@ -16,8 +16,21 @@ Notes
 The given string will never have more than one missing letter.
 */
 
-function missingLetter( /*args*/ ) {
+function missingLetter( word ) {
   //your code
+
+  let ASCIIcounter = word.charCodeAt(0)
+
+  for (let letter of word){
+    if (letter.charCodeAt(0) === ASCIIcounter){
+      ASCIIcounter++
+    } else {
+      return String.fromCharCode(ASCIIcounter)
+    }
+  }
+
+  return "No Missing Letter"
+
 }
 
 exports.solution = missingLetter;

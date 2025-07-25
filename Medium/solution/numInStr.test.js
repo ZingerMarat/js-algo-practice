@@ -12,7 +12,7 @@ describe(__filename, () => {
     ${["this IS", "10xYZ", "xy2K77", "Z1K2W0", "xYz"]} | ${["10xYZ", "xy2K77", "Z1K2W0"]}
     ${["-/>", "10bc", "abc "]}                         | ${["10bc"]}
   `(
-    "returns $expected when calling with the following param/s: a",
+    "returns $expected when calling with the following param/s: $a",
     ({ a, expected }) => {
       expect(file.solution(a)).toStrictEqual(expected);
     }

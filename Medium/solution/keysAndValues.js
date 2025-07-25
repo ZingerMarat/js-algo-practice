@@ -14,8 +14,18 @@ Notes
 Remember to sort the keys.
 */
 
-function keysAndValues( /*args*/ ) {
+function keysAndValues( args ) {
   //your code
+  let k = []
+  let v = []
+
+  k = Object.keys(args)
+  v = Object.values(args)
+
+  return [k, v]
 }
+
+console.log(keysAndValues({ key1: true, key2: false, key3: undefined }))
+
 
 exports.solution = keysAndValues;
