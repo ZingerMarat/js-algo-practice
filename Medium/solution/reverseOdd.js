@@ -13,8 +13,24 @@ Notes
 There is exactly one space between each word and no punctuation is used.
 */
 
-function reverseOdd( /*args*/ ) {
+function reverseOdd( sentence ) {
   //your code
+
+  const words = sentence.split(' ')
+  const res = []
+
+  for (let word of words){
+    if (!(word.length % 2 === 0)){
+      const reversedWord = word.split('').reverse().join("")
+      res.push(reversedWord)
+    } else {
+      res.push(word)
+    }
+  }
+
+  return res.join(' ')
 }
+
+console.log(reverseOdd("Bananas"));
 
 exports.solution = reverseOdd;
