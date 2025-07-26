@@ -11,8 +11,27 @@ Notes
 If the input is an empty array, return [0, 0, 0].
 */
 
-function timeSum( /*args*/ ) {
-  //your code
+function timeSum( args ) {
+  let [hours, minutes, seconds] = [0, 0, 0];
+
+  for (let arg of args){
+    let [h, m, s] = arg.split(':')
+    hours += Number(h)
+    minutes += Number(m)
+    seconds += Number(s)
+  }
+
+  while(seconds > 60){
+    seconds -= 60
+    minutes += 1
+  }
+
+  while(minutes > 60){
+    minutes -= 60
+    hours += 1
+  }
+
+  return [hours, minutes, seconds]
 }
 
 exports.solution = timeSum;
