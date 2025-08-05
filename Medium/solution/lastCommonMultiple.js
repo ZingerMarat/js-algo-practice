@@ -14,8 +14,8 @@ The LCM is the smallest integer that divides both numbers such that the remainde
 
 function lastCommonMultiple(a, b) {
   //your code
-  let num1 = a < b ? a : b
-  let num2 = a + b - num1
+  let num2 = a < b ? a : b      //lower number
+  let num1 = (a + b) - num2     //greater number
 
   //GCD
   while(num2!==0){
@@ -25,7 +25,7 @@ function lastCommonMultiple(a, b) {
   const gcd = num1
 
 
-  //LCD
+  //LCM
   return (a * b) / gcd
 }
 
