@@ -15,8 +15,24 @@ Notes
 Add elements in the new array in the same way they occur in the input array.
 */
 
-function leader( /*args*/ ) {
+function leader(arr) {
   //your code
+
+  const leader = []
+  let biggest = arr[arr.length - 1]
+
+  leader.unshift(biggest)
+
+  for (let i = arr.length - 2; i >= 0; i--) {
+    if (arr[i] >= biggest) {
+      biggest = arr[i]
+      leader.unshift(biggest)
+    }
+  }
+
+  return leader
 }
 
-exports.solution = leader;
+console.log(leader([2, 3, 20, 15, 8, 3]))
+
+exports.solution = leader
