@@ -56,7 +56,9 @@
     "test-matrix": "jest --testPathPattern=Very_Hard/matrix.test.js",
     "test-numThenChar": "jest --testPathPattern=Very_Hard/numThenChar.test.js",
     "test-sudokuValidator": "jest --testPathPattern=Very_Hard/sudokuValidator.test.js",
-    "test-zeroIndices": "jest --testPathPattern=Very_Hard/zeroIndices.test.js"
+    "test-zeroIndices": "jest --testPathPattern=Very_Hard/zeroIndices.test.js",
+    "test-countChips": "jest --testPathPattern=Very_Hard/countChips.test.js",
+    "test-islandCounter": "jest --testPathPattern=Very_Hard/islandCounter.test.js"
   },
   "author": "",
   "license": "ISC",
